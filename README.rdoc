@@ -6,3 +6,8 @@
  python -m SimpleHTTPServer 3000
  http://localhost:3000/
 
+=== coffeeファイル編集
+ # 前提：npm
+ cd coffee_create
+ npm install coffee-script
+ coffee -wc js/client.coffee
