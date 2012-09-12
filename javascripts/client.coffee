@@ -44,8 +44,15 @@ class Block
     @image.x = 100
     @image.y = 100
     @image.onMouseOver = (e)=>@runaway()
+    # jsなんでこれでも
+    #@image.onMouseOver = @runaway_by_e
     return @
   runaway: ->
+    Tween.get(@image).to({
+      x: Math.random() * @image.parent.canvas.width,
+      y: Math.random() * @image.parent.canvas.height
+    }, 500)
+  runaway_by_e: (e)=>
     Tween.get(@image).to({
       x: Math.random() * @image.parent.canvas.width,
       y: Math.random() * @image.parent.canvas.height
